@@ -1,0 +1,6 @@
+@ChurchTransportation.Api_HostAddress = http://localhost:5155
+
+GET {{ChurchTransportation.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

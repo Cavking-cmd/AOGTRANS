@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="ChurchTransportation.Api/ChurchTransportation.Api.csproj" />
+  <Project Path="ChurchTransportation.Application/ChurchTransportation.Application.csproj" />
+  <Project Path="ChurchTransportation.Domain/ChurchTransportation.Domain.csproj" />
+  <Project Path="ChurchTransportation.Infrastructure/ChurchTransportation.Infrastructure.csproj" />
+  <Project Path="ChurchTransportation.Tests/ChurchTransportation.Tests.csproj" />
+</Solution>

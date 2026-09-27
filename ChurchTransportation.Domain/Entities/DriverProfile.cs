@@ -1,0 +1,32 @@
+using ChurchTransportation.Domain.Enums;
+
+namespace ChurchTransportation.Domain.Entities;
+
+public class DriverProfile
+{
+    public Guid Id { get; set; }
+
+    public Guid UserId { get; set; }
+
+    public string? LicenseNumber { get; set; }
+
+    public DateTime? LicenseExpiryDate { get; set; }
+
+    public DriverStatus Status { get; set; } = DriverStatus.OffDuty;
+
+    public string? Notes { get; set; }
+
+    public decimal? Rating { get; set; }
+
+    public int TotalTripsCompleted { get; set; }
+
+    public DateTime CreatedAt { get; set; }
+
+    public DateTime? UpdatedAt { get; set; }
+
+    public User User { get; set; } = null!;
+
+    public ICollection<DriverVehicle> DriverVehicles { get; set; } = new List<DriverVehicle>();
+
+    public ICollection<Journey> Journeys { get; set; } = new List<Journey>();
+}

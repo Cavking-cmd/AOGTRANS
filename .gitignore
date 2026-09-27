@@ -1,0 +1,55 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+[Ll]og/
+[Ll]ogs/
+artifacts/
+publish/
+
+# Visual Studio / Rider / VS Code
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+*.DotSettings.user
+
+# Test results
+[Tt]est[Rr]esult*/
+coverage*.json
+coverage*.xml
+coverage*.info
+*.coverage
+*.trx
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# Local database files (SQL Server / EF Core)
+*.db
+*.db-shm
+*.db-wal
+*.mdf
+*.ldf
+*.dbmdl
+*.dbcontext
+
+# User-specific / secrets
+*.env
+*.local.json
+appsettings.Local.json
+*.pfx
+*.key
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
