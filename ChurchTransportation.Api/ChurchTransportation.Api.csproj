@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ChurchTransportation.Application\ChurchTransportation.Application.csproj" />
+    <ProjectReference Include="..\ChurchTransportation.Infrastructure\ChurchTransportation.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

@@ -37,6 +37,4 @@ public class RideAssignment
     public Journey Journey { get; set; } = null!;
 
     public RideAssignment? ReassignedFromAssignment { get; set; }
-
-    public RideAssignment? ReassignedToAssignment { get; set; }
 }
