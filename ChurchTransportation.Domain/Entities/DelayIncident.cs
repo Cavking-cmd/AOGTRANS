@@ -2,10 +2,8 @@ using ChurchTransportation.Domain.Enums;
 
 namespace ChurchTransportation.Domain.Entities;
 
-public class DelayIncident
+public class DelayIncident : BaseEntity
 {
-    public Guid Id { get; set; }
-
     public Guid JourneyId { get; set; }
 
     public Guid? JourneyStopId { get; set; }
@@ -24,11 +22,7 @@ public class DelayIncident
 
     public bool IsResolved { get; set; }
 
-    public DateTime CreatedAt { get; set; }
-
-    public DateTime? UpdatedAt { get; set; }
-
-    public Journey Journey { get; set; } = null!;
+    public required Journey Journey { get; set; }
 
     public JourneyStop? JourneyStop { get; set; }
 }

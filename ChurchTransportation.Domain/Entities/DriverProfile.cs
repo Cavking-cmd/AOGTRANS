@@ -2,10 +2,8 @@ using ChurchTransportation.Domain.Enums;
 
 namespace ChurchTransportation.Domain.Entities;
 
-public class DriverProfile
+public class DriverProfile : BaseEntity
 {
-    public Guid Id { get; set; }
-
     public Guid UserId { get; set; }
 
     public string? LicenseNumber { get; set; }
@@ -20,11 +18,7 @@ public class DriverProfile
 
     public int TotalTripsCompleted { get; set; }
 
-    public DateTime CreatedAt { get; set; }
-
-    public DateTime? UpdatedAt { get; set; }
-
-    public User User { get; set; } = null!;
+    public required User User { get; set; }
 
     public ICollection<DriverVehicle> DriverVehicles { get; set; } = new List<DriverVehicle>();
 

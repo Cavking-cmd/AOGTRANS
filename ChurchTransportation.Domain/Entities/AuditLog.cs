@@ -1,14 +1,12 @@
 namespace ChurchTransportation.Domain.Entities;
 
-public class AuditLog
+public class AuditLog : BaseEntity
 {
-    public Guid Id { get; set; }
-
     public Guid? UserId { get; set; }
 
-    public string Action { get; set; } = string.Empty;
+    public required string Action { get; set; }
 
-    public string EntityType { get; set; } = string.Empty;
+    public required string EntityType { get; set; }
 
     public string? EntityId { get; set; }
 
@@ -17,8 +15,6 @@ public class AuditLog
     public string? IpAddress { get; set; }
 
     public string? Metadata { get; set; }
-
-    public DateTime CreatedAt { get; set; }
 
     public User? User { get; set; }
 }

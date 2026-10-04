@@ -1,10 +1,8 @@
 namespace ChurchTransportation.Domain.Entities;
 
-public class SystemSetting
+public class SystemSetting : BaseEntity
 {
-    public Guid Id { get; set; }
-
-    public string Key { get; set; } = string.Empty;
+    public required string Key { get; set; }
 
     public string? Value { get; set; }
 
@@ -15,8 +13,4 @@ public class SystemSetting
     public string? Description { get; set; }
 
     public bool IsPublic { get; set; }
-
-    public DateTime CreatedAt { get; set; }
-
-    public DateTime? UpdatedAt { get; set; }
 }

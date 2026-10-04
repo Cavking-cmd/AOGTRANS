@@ -1,9 +1,7 @@
 namespace ChurchTransportation.Domain.Entities;
 
-public class DriverVehicle
+public class DriverVehicle : BaseEntity
 {
-    public Guid Id { get; set; }
-
     public Guid DriverProfileId { get; set; }
 
     public Guid VehicleId { get; set; }
@@ -16,7 +14,7 @@ public class DriverVehicle
 
     public string? Notes { get; set; }
 
-    public DriverProfile DriverProfile { get; set; } = null!;
+    public required DriverProfile DriverProfile { get; set; }
 
-    public Vehicle Vehicle { get; set; } = null!;
+    public required Vehicle Vehicle { get; set; }
 }

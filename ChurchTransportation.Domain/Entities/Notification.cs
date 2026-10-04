@@ -2,17 +2,15 @@ using ChurchTransportation.Domain.Enums;
 
 namespace ChurchTransportation.Domain.Entities;
 
-public class Notification
+public class Notification : BaseEntity
 {
-    public Guid Id { get; set; }
-
     public Guid UserId { get; set; }
 
     public NotificationType Type { get; set; }
 
-    public string Title { get; set; } = string.Empty;
+    public required string Title { get; set; }
 
-    public string Message { get; set; } = string.Empty;
+    public required string Message { get; set; }
 
     public Guid? RideRequestId { get; set; }
 
@@ -24,7 +22,5 @@ public class Notification
 
     public DateTime? ReadAt { get; set; }
 
-    public DateTime CreatedAt { get; set; }
-
-    public User User { get; set; } = null!;
+    public required User User { get; set; }
 }

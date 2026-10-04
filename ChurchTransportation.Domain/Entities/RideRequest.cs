@@ -2,15 +2,13 @@ using ChurchTransportation.Domain.Enums;
 
 namespace ChurchTransportation.Domain.Entities;
 
-public class RideRequest
+public class RideRequest : BaseEntity
 {
-    public Guid Id { get; set; }
-
     public Guid PassengerProfileId { get; set; }
 
     public Guid EventId { get; set; }
 
-    public string PickupAddress { get; set; } = string.Empty;
+    public required string PickupAddress { get; set; }
 
     public decimal PickupLatitude { get; set; }
 
@@ -32,13 +30,9 @@ public class RideRequest
 
     public string? CancellationReason { get; set; }
 
-    public DateTime CreatedAt { get; set; }
+    public required PassengerProfile PassengerProfile { get; set; }
 
-    public DateTime? UpdatedAt { get; set; }
-
-    public PassengerProfile PassengerProfile { get; set; } = null!;
-
-    public Event Event { get; set; } = null!;
+    public required Event Event { get; set; }
 
     public RideAssignment? RideAssignment { get; set; }
 

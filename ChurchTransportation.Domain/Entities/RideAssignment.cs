@@ -2,10 +2,8 @@ using ChurchTransportation.Domain.Enums;
 
 namespace ChurchTransportation.Domain.Entities;
 
-public class RideAssignment
+public class RideAssignment : BaseEntity
 {
-    public Guid Id { get; set; }
-
     public Guid RideRequestId { get; set; }
 
     public Guid JourneyId { get; set; }
@@ -32,9 +30,9 @@ public class RideAssignment
 
     public Guid? ReassignedToAssignmentId { get; set; }
 
-    public RideRequest RideRequest { get; set; } = null!;
+    public required RideRequest RideRequest { get; set; }
 
-    public Journey Journey { get; set; } = null!;
+    public required Journey Journey { get; set; }
 
     public RideAssignment? ReassignedFromAssignment { get; set; }
 }

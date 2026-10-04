@@ -2,10 +2,8 @@ using ChurchTransportation.Domain.Enums;
 
 namespace ChurchTransportation.Domain.Entities;
 
-public class Journey
+public class Journey : BaseEntity
 {
-    public Guid Id { get; set; }
-
     public Guid EventId { get; set; }
 
     public Guid DriverProfileId { get; set; }
@@ -38,15 +36,11 @@ public class Journey
 
     public string? Notes { get; set; }
 
-    public DateTime CreatedAt { get; set; }
+    public required Event Event { get; set; }
 
-    public DateTime? UpdatedAt { get; set; }
+    public required DriverProfile DriverProfile { get; set; }
 
-    public Event Event { get; set; } = null!;
-
-    public DriverProfile DriverProfile { get; set; } = null!;
-
-    public Vehicle Vehicle { get; set; } = null!;
+    public required Vehicle Vehicle { get; set; }
 
     public ChatRoom? ChatRoom { get; set; }
 

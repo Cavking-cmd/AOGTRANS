@@ -2,11 +2,9 @@ using ChurchTransportation.Domain.Enums;
 
 namespace ChurchTransportation.Domain.Entities;
 
-public class Vehicle
+public class Vehicle : BaseEntity
 {
-    public Guid Id { get; set; }
-
-    public string RegistrationNumber { get; set; } = string.Empty;
+    public required string RegistrationNumber { get; set; }
 
     public string? PlateNumber { get; set; }
 
@@ -21,10 +19,6 @@ public class Vehicle
     public VehicleStatus Status { get; set; } = VehicleStatus.Available;
 
     public string? Notes { get; set; }
-
-    public DateTime CreatedAt { get; set; }
-
-    public DateTime? UpdatedAt { get; set; }
 
     public ICollection<DriverVehicle> DriverVehicles { get; set; } = new List<DriverVehicle>();
 

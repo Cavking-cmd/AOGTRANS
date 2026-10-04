@@ -1,9 +1,7 @@
 namespace ChurchTransportation.Domain.Entities;
 
-public class ChatParticipant
+public class ChatParticipant : BaseEntity
 {
-    public Guid Id { get; set; }
-
     public Guid ChatRoomId { get; set; }
 
     public Guid UserId { get; set; }
@@ -16,7 +14,7 @@ public class ChatParticipant
 
     public bool IsMuted { get; set; }
 
-    public ChatRoom ChatRoom { get; set; } = null!;
+    public required ChatRoom ChatRoom { get; set; }
 
-    public User User { get; set; } = null!;
+    public required User User { get; set; }
 }

@@ -2,13 +2,11 @@ using ChurchTransportation.Domain.Enums;
 
 namespace ChurchTransportation.Domain.Entities;
 
-public class ChatRoom
+public class ChatRoom : BaseEntity
 {
-    public Guid Id { get; set; }
-
     public ChatRoomType Type { get; set; } = ChatRoomType.General;
 
-    public string Name { get; set; } = string.Empty;
+    public required string Name { get; set; }
 
     public string? Description { get; set; }
 
@@ -17,8 +15,6 @@ public class ChatRoom
     public Guid? CreatedByUserId { get; set; }
 
     public bool IsActive { get; set; } = true;
-
-    public DateTime CreatedAt { get; set; }
 
     public DateTime? ClosedAt { get; set; }
 

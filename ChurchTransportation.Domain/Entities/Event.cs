@@ -2,11 +2,9 @@ using ChurchTransportation.Domain.Enums;
 
 namespace ChurchTransportation.Domain.Entities;
 
-public class Event
+public class Event : BaseEntity
 {
-    public Guid Id { get; set; }
-
-    public string Name { get; set; } = string.Empty;
+    public required string Name { get; set; }
 
     public string? Description { get; set; }
 
@@ -25,10 +23,6 @@ public class Event
     public EventStatus Status { get; set; } = EventStatus.Draft;
 
     public string? Notes { get; set; }
-
-    public DateTime CreatedAt { get; set; }
-
-    public DateTime? UpdatedAt { get; set; }
 
     public ICollection<RideRequest> RideRequests { get; set; } = new List<RideRequest>();
 

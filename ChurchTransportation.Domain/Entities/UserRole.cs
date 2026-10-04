@@ -1,9 +1,7 @@
 namespace ChurchTransportation.Domain.Entities;
 
-public class UserRole
+public class UserRole : BaseEntity
 {
-    public Guid Id { get; set; }
-
     public Guid UserId { get; set; }
 
     public Guid RoleId { get; set; }
@@ -12,7 +10,7 @@ public class UserRole
 
     public Guid? AssignedByUserId { get; set; }
 
-    public User User { get; set; } = null!;
+    public required User User { get; set; }
 
-    public Role Role { get; set; } = null!;
+    public required Role Role { get; set; }
 }

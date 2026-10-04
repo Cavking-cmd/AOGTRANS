@@ -1,16 +1,12 @@
 namespace ChurchTransportation.Domain.Entities;
 
-public class Role
+public class Role : BaseEntity
 {
-    public Guid Id { get; set; }
-
-    public string Name { get; set; } = string.Empty;
+    public required string Name { get; set; }
 
     public string? Description { get; set; }
 
     public bool IsSystemRole { get; set; }
-
-    public DateTime CreatedAt { get; set; }
 
     public ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
 }
